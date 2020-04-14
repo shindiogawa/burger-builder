@@ -11,9 +11,11 @@ const burger = (props) => {
     }).reduce((prevValue, currValue)=>{
         return prevValue.concat(currValue);
     },[]);
+
     if(transformedIngredients.length === 0) {
         transformedIngredients =  <p>Please start adding ingredients!</p>
     }
+    
     return (
         <div className={classes.Burger}>
             <BurgerIngredient type="bread-top" />
